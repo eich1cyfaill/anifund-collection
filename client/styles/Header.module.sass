@@ -2,17 +2,19 @@
     background: linear-gradient(90deg, #666DA5, #CD506F)
     color: white
     height: 7vh
-    margin: 6px 6px
+    margin: 1vw 1vw
     border-radius: 11px
     display: flex
     padding: 0 55px
     justify-content: space-between
+    align-items: center
+    nav
+        height: 100%
     &__title
         display: flex
         justify-content: center
         align-items: center
         font-size: 28px
-        padding-bottom: 6px
     &__navi
         display: flex
         height: 100%
@@ -21,15 +23,82 @@
         &_item
             text-decoration: none
             list-style: none
-            width: 90px
+            padding: 0 15px
             display: flex
             flex-direction: row
             justify-content: center
             align-items: center
             margin: 0
             transition-duration: .2s
+            width: 80px
             &:hover
-                background: rgba(255,255,255, 0.5)
+                background: rgba(255,255,255, 0.3)
                 transition-duration: .2s
                 cursor: pointer
+                border-bottom: 5px solid rgba(255,255,255, 0.6)
+                background: linear-gradient(223deg, rgba(255,255,255, 0.05), rgba(255,255,255, 0.8), rgba(255,255,255, 0.1))
+                background-size: 600% 600%
+                -webkit-animation: buttonNavAnimation 9s ease infinite
+                -moz-animation: buttonNavAnimation 9s ease infinite
+                -o-animation: buttonNavAnimation 9s ease infinite
+                animation: buttonNavAnimation 9s ease infinite
+
+.burger
+
+    &__item
+        width: 23px
+        height: 2px
+        background: white
+        margin: 5px 0
+
+
+
+@-webkit-keyframes buttonNavAnimation
+    0%
+        background-position: 0% 88%
+    50%
+        background-position: 100% 13%
+    100%
+        background-position: 0% 88%
+
+@-moz-keyframes buttonNavAnimation
+    0%
+        background-position: 0% 88%
+    50%
+        background-position: 100% 13%
+    100%
+        background-position: 0% 88%
+
+@-o-keyframes buttonNavAnimation
+    0%
+        background-position: 0% 88%
+    50%
+        background-position: 100% 13%
+    100%
+        background-position: 0% 88%
+
+
+@keyframes buttonNavAnimation
+    0%
+        background-position: 0% 88%
+    50%
+        background-position: 100% 13%
+    100%
+        background-position: 0% 88%
+
+@media screen and (min-width: 600px)
+    .burger
+        display: none
+
+@media screen and (max-width: 600px)
+    .header
+        display: flex
+        justify-content: space-between
+        padding: 0 25px
+        &__title
+        nav
+            display: none
+    .burger
+        &:hover
+            cursor: pointer
 
